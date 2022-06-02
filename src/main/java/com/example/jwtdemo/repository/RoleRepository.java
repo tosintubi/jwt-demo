@@ -1,12 +1,11 @@
 package com.example.jwtdemo.repository;
 
-
-import com.example.jwtdemo.entity.User;
+import com.example.jwtdemo.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
-    User findByUsername(String username);
+    Role findByName(String name);
 }
