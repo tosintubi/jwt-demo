@@ -69,8 +69,6 @@ public class UserServiceImpl implements  UserService, UserDetailsService {
             throw new UsernameNotFoundException("User not found in the database");
         }
         log.info("User found in the database");
-        // String username, String password, boolean enabled, boolean accountNonExpired,
-        // boolean credentialsNonExpired, boolean accountNonLocked, Collection<? extends GrantedAuthority> authorities
 
         Collection<SimpleGrantedAuthority> authorities = new ArrayList<>();
         user.getRoles().forEach(role ->{
